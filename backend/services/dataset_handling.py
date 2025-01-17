@@ -1,16 +1,16 @@
 import pandas as pd
 
-DATASET_PATH = 'dataset.xlsx'
+DATASET_PATH = 'data/dataset.xlsx'
 
 def update_dataset(data):
     # Explicitly parse the 'time' column as datetime when reading the Excel file
     df = pd.read_excel(DATASET_PATH, parse_dates=['time'])
 
     # Ensure the 'time' column is in the correct format
-    df['time'] = pd.to_datetime(df['time'])
+    df['time'] = pd.to_datetime(df['time'], format='ISO8601')
 
     # Append the new row to the existing DataFrame
-    df_updated = df.append(data, ignore_index=True)
+    df_updated = pd.concat([df, pd.DataFrame([data])], ignore_index=True)
 
     # Print the last few rows to check the result
     print(df_updated.tail())
@@ -28,7 +28,6 @@ def get_last_n_records(df, current_time, n, column):
 
 
 def fetch_dataset():
-    file_path = 'dataset.xlsx'
-    df = pd.read_excel(file_path)
+    df = pd.read_excel(DATASET_PATH)
     df['time'] = pd.to_datetime(df['time'])
     return df

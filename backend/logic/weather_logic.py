@@ -5,7 +5,7 @@ from services.dataset_handling import fetch_dataset, get_current_data, update_da
 from services.forecasting import predict_prcp, predict_temp
 from utils import get_prcp_data, get_temp_data
 
-file_path = 'temperature_predictions.json'
+file_path = 'data/temperature_predictions.json'
 
 def store_new_predictions(current_hour, data):
     data[0]['time'] = data[0]['time'].strftime('%Y-%m-%dT%H:%M:%S')
