@@ -47,7 +47,7 @@ For more details about model training, refer to the `model_training` folder.
 
 ---
 
-## Backend
+## Backend using Flask python
 
 - **Overview**:
 
@@ -72,7 +72,7 @@ For more information, refer to the `backend` folder.
 
 ---
 
-## Frontend
+## Frontend using Next js
 
 - The frontend is a simple single-page application (SPA) built using Tailwind CSS.
 - It fetches data and predictions from the backend and displays them in a clean and user-friendly interface.
