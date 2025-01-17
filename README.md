@@ -51,7 +51,7 @@ For more details about model training, refer to the `model_training` folder.
 
 - **Overview**:
 
-  - The backend is built using Python and hosted on [PythonAnywhere](https://www.pythonanywhere.com/).
+  - The backend is built using Flask Python and hosted on [PythonAnywhere](https://www.pythonanywhere.com/).
   - It fetches real-time weather data using the [WeatherAPI](https://www.weatherapi.com/) service.
   - The backend processes the data and provides predictions via a single endpoint.
 
@@ -74,7 +74,7 @@ For more information, refer to the `backend` folder.
 
 ## Frontend using Next js
 
-- The frontend is a simple single-page application (SPA) built using Tailwind CSS.
+- The frontend is a simple single-page application (SPA) built using next js and Tailwind CSS.
 - It fetches data and predictions from the backend and displays them in a clean and user-friendly interface.
 - Hosted on [Vercel](https://vercel.com/).
 
